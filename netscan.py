@@ -10,7 +10,6 @@ rdr = False #reverse-domain-resolution
 privateIP = (subprocess.check_output("hostname -I", shell=True).decode('ascii'))[:-1]
 privateGatewayIP = (subprocess.check_output("ip route | grep default | awk '{print $3}'", shell=True).decode('ascii'))[:-1]
 publicGatewayIP = (subprocess.check_output("dig +short myip.opendns.com @resolver1.opendns.com", shell=True).decode('ascii'))[:-1]
-rdrResults = None
 
 if(len(sys.argv) > 1):
     for x in sys.argv:
