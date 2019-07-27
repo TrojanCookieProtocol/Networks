@@ -23,3 +23,4 @@ print("Public Gateway IP: ", publicGatewayIP)
 
 if(rdr):
     os.system("cat .rdr.txt | awk {'if(substr($5, 1, 3) != 192) print $5, $6'}")
+    os.system("rm .rdr.txt")
